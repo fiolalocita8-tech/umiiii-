@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for umi 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#8b1e3f;
+font-family:'Poppins',sans-serif;
+overflow:hidden;
+color:white;
+}
+
+.page{
+width:100vw;
+height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:30px;
+text-align:center;
+position:relative;
+}
+
+.active{
+display:flex;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+input{
+padding:12px 20px;
+border:none;
+border-radius:20px;
+outline:none;
+width:220px;
+margin-top:20px;
+text-align:center;
+}
+
+button{
+margin-top:15px;
+padding:10px 25px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:white;
+color:#8b1e3f;
+font-weight:bold;
+}
+
+.photo{
+width:220px;
+height:220px;
+border-radius:20px;
+object-fit:cover;
+border:4px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.4);
+margin-bottom:30px;
+}
+
+.typing{
+font-size:1.1rem;
+max-width:700px;
+line-height:1.8;
+min-height:150px;
+}
+
+.next-btn{
+position:absolute;
+bottom:50px;
+}
+
+.letter{
+max-width:850px;
+height:80vh;
+overflow-y:auto;
+text-align:left;
+line-height:2;
+padding-right:10px;
+}
+
+.letter::-webkit-scrollbar{
+width:5px;
+}
+
+.letter::-webkit-scrollbar-thumb{
+background:white;
+border-radius:10px;
+}
+
+.star{
+position:fixed;
+top:-10px;
+color:white;
+font-size:12px;
+animation:fall linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+.fade{
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+.small{
+font-size:.95rem;
+opacity:.8;
+}
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+<source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOCKSCREEN -->
+
+<div class="page active fade" id="page1">
+
+<h1>🔒</h1>
+
+<h2>for umi 🤍</h2>
+
+<p class="small">enter password</p>
+
+<input type="password" id="password">
+
+<button onclick="checkPassword()">unlock</button>
+
+<p id="error"></p>
+
+</div>
+
+<!-- FOTO -->
+
+<div class="page fade" id="page2">
+
+<img src="foto.jpg" class="photo">
+
+<div class="typing" id="typing"></div>
+
+<button class="next-btn" onclick="nextPage()">
+continue →
+</button>
+
+</div>
+
+<!-- LETTER -->
+
+<div class="page fade" id="page3">
+
+<div class="letter">
+
+<h1 style="font-size:2.3rem;">
+for umi 🤍
+</h1>
+
+<br>
+
+<p>
+hehehe hiii umiii ^^ sebenernya fio ga terlalu jago nyusun kata-kata, jadi maaf ya kalau semuanya terdengar berantakan. tapi ada banyak hal yang pengen aku sampein, dan rasanya ga akan cukup kalau cuma bilang "terima kasih".
+</p>
+
+<br>
+
+<p>
+makasih karena udah jadi pembina osis yang sabar banget ngadepin kami. fio tau ngurus banyak anak dengan sifat dan kepala yang beda-beda itu capek, kadang pasti bikin kesel juga. tapi umi selalu berusaha ada buat kami, selalu ngarahin kami, dan selalu ngingetin kami kalau kami bisa jadi lebih baik dari hari kemarin.
+</p>
+
+<br>
+
+<p>
+tapi yang paling pengen fio bilang, makasih bukan cuma karena umi udah ngebina osis.
+</p>
+
+<br>
+
+<p>
+makasih karena pernah ada buat fio di saat yang bahkan ga banyak orang tau kalau fio lagi kesusahan. ada masa dimana semuanya terasa berattt banget, dan jujur aja fio ga pernah berharap ada orang yang sadar. fio pikir bisa nyimpen semuanya sendiri.
+</p>
+
+<br>
+
+<p>
+but somehow, i can't even do it without u, umi :( 🤍
+</p>
+
+<br>
+
+<p>
+umi dengerin fio tanpa ngehakimin, umi nenangin fio waktu pikiran lagi berantakan, dan umi terus bilang kalau everything is gonna be okay.
+</p>
+
+<br>
+
+<p>
+mungkin buat umi itu cuma percakapan biasa, cuma beberapa kata sederhana.
+</p>
+
+<br>
+
+<p>
+<b>but for me, it meant so much more than that.</b>
+</p>
+
+<br>
+
+<p>
+karena di saat fio merasa sendirian, umi ada.
+<br>
+di saat fio bingung harus cerita ke siapa, umi ada.
+<br>
+dan di saat fio butuh seseorang buat bilang kalau semuanya bakal baik-baik aja, umi juga ada.
+</p>
+
+<br>
+
+<p>
+fio gatau umi sadar atau engga, tapi hal-hal kecil yang umi lakuin waktu itu bener-bener berarti buat fio.
+</p>
+
+<br>
+
+<p>
+thank you for listening.<br>
+thank you for understanding.<br>
+thank you for being kind.<br>
+thank you for staying.
+</p>
+
+<br>
+
+<p>
+dan makasih karena udah jadi salah satu orang yang bikin fio percaya kalau masih ada orang baik yang tulus peduli sama orang lain yaa mii 🤍
+</p>
+
+<br>
+
+<p>
+semoga semua kebaikan yang umi kasih ke orang-orang bisa balik berkali-kali lipat ke umi. semoga umi selalu dikasih kesehatan, kebahagiaan, dan hal-hal baik yang umi pantas dapetin.
+</p>
+
+<br>
+
+<p>
+dan kalau suatu hari umi lupa seberapa berarti diri umi buat orang lain, i hope you remember this:
+</p>
+
+<br>
+
+<p style="text-align:center;font-size:1.2rem;">
+<b>you matter.</b><br>
+<b>you are appreciated.</b><br>
+<b>and you have helped more people than you realize.</b>
+</p>
+
+<br>
+
+<p>
+makasih untuk semuanya, umi ☹️🤍
+</p>
+
+<br><br>
+
+<p style="text-align:right;">
+— fio 🤍
+</p>
+
+<br><br>
+
+</div>
+
+</div>
+
+<script>
+
+const password = "umi2026";
+
+function checkPassword(){
+
+let input =
+document.getElementById("password").value;
+
+if(input === password){
+
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="flex";
+
+document.getElementById("music").play();
+
+typeWriter();
+
+}else{
+
+document.getElementById("error").innerHTML =
+"wrong password ☹️";
+
+}
+
+}
+
+const text =
+`hi umi 🤍
+
+i made this little website for you...
+
+because there are some things i've been wanting to say.
+
+and i hope you'll read everything until the end ☹️🤍`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,50);
+
+}
+
+}
+
+function nextPage(){
+
+document.getElementById("page2").style.display="none";
+document.getElementById("page3").style.display="flex";
+
+}
+
+function createStars(){
+
+const star =
+document.createElement("div");
+
+star.classList.add("star");
+
+star.innerHTML="✦";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.animationDuration=
+(Math.random()*5+5)+"s";
+
+document.body.appendChild(star);
+
+setTimeout(()=>{
+star.remove();
+},10000);
+
+}
+
+setInterval(createStars,250);
+
+</script>
+
+</body>
+</html>
